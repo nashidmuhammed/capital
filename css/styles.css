@@ -10163,12 +10163,76 @@ header.masthead h1 {
   opacity: 1;
 }
 
-.text-white-75 {
-  color: rgba(255, 255, 255, 0.75);
+.text-white-85 {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
   border-color: rgba(229, 181, 23, 0.8);
   box-shadow: 0 1px 1px rgba(229, 167, 23, 0.075) inset, 0 0 8px rgba(229, 174, 23, 0.6);
   outline: 0 none;
+}
+
+/*Coustomer*/
+.msg {
+  padding: 5% 5% 5%;
+}
+.msg-bk {
+  /*background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ),  url(img/msg-bg.jpg);*/
+  display: table;
+  height: 60%;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+}
+.msg-bk .container {
+  padding-top: 5%;
+}
+
+
+.msg-bk .box1 {
+  background-color: white;
+  padding: 5% 5% 5%;
+  width: 48%;
+  float: left;
+  border-radius: 15px;
+}
+.msg-bk .box2 {
+  background-color: white;
+  padding: 5% 5% 5%;
+  width: 48%;
+  float: right;    
+  border-radius: 15px;
+}
+.msg h1 {
+  opacity: 0;
+}
+.msg img {
+  opacity: 0;
+}
+.msg h1.ready {
+  animation: msgH1 2s ease forwards;
+}
+.msg img.ready {
+  animation: msgImg 2s ease forwards;
+}
+@keyframes msgH1{
+  0%{
+      opacity: 0;
+      transform: translateX(-500px);
+  }
+  100%{
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+@keyframes msgImg{
+  0%{
+      opacity: 0;
+      transform: translateX(500px);
+  }
+  100%{
+      opacity: 1;
+      transform: translateX(0);
+  }
 }
